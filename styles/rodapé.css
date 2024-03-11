@@ -1,0 +1,52 @@
+hr {
+    margin: 0;
+}
+
+.rodapé {
+    background: var(--azul-degrade);
+    color: var(--branco);
+    padding: 2.5em 2em;
+    
+}
+
+
+.rodapé__informações {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+.rodapé__titulo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.rodapé__contato,
+.rodapé__localização,
+.rodapé__email {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.rodapé__email {
+    color: var(--laranja);
+}
+
+.rodapé__imagem {
+    width: 1.5em;
+    vertical-align: middle; /* Adicionando esta propriedade para alinhar verticalmente */
+    margin-right: 5px; /* Espaçamento à direita do ícone */
+}
+
+/* Estilo para links (se necessário) */
+.rodapé__informações a {
+    color: var(--laranja);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rodapé__informações a:hover {
+    text-decoration: underline;
+}

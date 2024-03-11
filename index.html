@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rossi Tecnologia em Podas</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="cabeçalho">
+        <div class="container">
+            <input type="checkbox" id="menu" class="container__botao">
+            <label for="menu" class="container__rotulo">
+                <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item">
+                    <a href="#tipos-de-serviços" class="lista-menu__link">Serviços</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#contato" class="lista-menu__link">Contato</a>
+                </li>
+            </ul>
+            <img src="img/logo_poda.jpg" alt="Logo da Rossi: Tecnologia em Podas" class="container__imagem">
+            <h1 class="container__titulo"><b class="container__titulo--negrito">Rossi</b> Tecnologia em Podas</h1>
+        </div>
+
+        <ul class="opções">
+
+            <li class="opções__item"><a href="#tipos-de-serviços" class="opções__link">Serviços</a></li>
+            <li class="opções__item"><a href="#contato" class="opções__link">Contato</a></li>
+        </ul>
+
+       
+    </header>
+    <section class="banner">
+        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+        <p class="banner__texto">Otimize sua produção com os nossos serviços!</p>
+
+    </section>
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">serviços e máquinas</h2>
+        <!-- Slider main container -->
+        <div class="carrossel__container">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/maquina_rua.jpg"
+                        alt="Podadora"></div>
+                <div class="swiper-slide"><img src="img/maquina_ao_lado_da_arvore.jpg"
+                        alt="Podadora"></div>
+                <div class="swiper-slide"><img src="img/maquina_noite.jpg"
+                        alt="Podando de noite"></div>
+                <div class="swiper-slide"><img src="img/frota.jpg" alt="Frota"></div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <section class="tópicos" id="tipos-de-serviços">
+            <h2 class="tópicos__titulo">Tipos de Serviços</h2>
+            <ul class="tópicos__lista">
+                <li class="tópicos__item">
+                    <a href="#" class="tópicos__link">Cítricos</a>
+                </li>
+                <li class="tópicos__item">
+                    <a href="#" class="tópicos__link">Cerca viva</a>
+                </li>
+                <li class="tópicos__item">
+                    <a href="#" class="tópicos__link">Frutas</a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="card">
+            <!-- 1º linha -->
+            <div class="card__descrição">
+                <!-- 1º coluna -->
+                <div class="descrição">
+                    
+                    <h3 class="descrição__titulo">Localização</h3>
+                    <h2 class="descrição__titulo-card">Vista Alegre do Alto - SP</h2>
+                    <p class="descrição__texto">Há mais de 15 anos atendemos a região com tradição e respeito, desde fazendas familiares até grande empresas. 
+                    </p>
+                </div>
+                <!-- 2º coluna -->
+                <img src="img/mapa_use.png" class="descrição__imagem">
+            </div>
+
+            <!-- 2º linha -->
+            <div class="card__botões">
+                <!-- 1º coluna -->
+                <ul class="botões">
+                    <li class="botões__item"><img src="img/planta.png" alt="O melhor para sua plantação"></li>
+                    <li class="botões__item"><img src="img/crescimento.png" alt="Cresça sua produção"></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+
+<section class="contato" id="contato">
+    <div class="contato__descrição">
+        <h2 class="contato__titulo">Realize seu orçamento!</h2>
+        <p class="contato__texto">Nos envie uma mensagem com o serviço desejado, tamanho da plantação e a cidade que será realizada</p>
+    </div>
+    <form action="#" method="post" class="contato__form" id="formulario-contato">
+        <input type="email" placeholder="Digite seu e-mail" class="contato__email" id="email-contato">
+        <textarea placeholder="Digite sua descrição" class="contato__descricao" id="descricao-contato"></textarea>
+        <button type="button" onclick="enviarContato()" class="contato__botão">Enviar</button>
+    </form>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/5516999999999" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+    <div id="mensagem-contato" class="contato__mensagem"></div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init("User ID"); 
+
+        function enviarContato() {
+            var email = document.getElementById('email-contato').value;
+            var descricao = document.getElementById('descricao-contato').value;
+            var mensagemContainer = document.getElementById('mensagem-contato');
+
+            emailjs.send("service_x8sacsu", "template_omy3e3m", {
+                to_email: "lr7leorossi07@gmail.com",
+                from_name: email,
+                message: descricao,
+            })
+            .then(function(response) {
+                console.log("Email enviado com sucesso!", response);
+                mensagemContainer.innerHTML = "E-mail enviado com sucesso! Verifique sua caixa de entrada.";
+                mensagemContainer.style.color = "green"; // Cor verde para sucesso
+            }, function(error) {
+                console.error("Erro ao enviar email:", error);
+                mensagemContainer.innerHTML = "Erro ao enviar o email. Por favor, tente novamente.";
+                mensagemContainer.style.color = "red"; // Cor vermelha para erro
+            });
+        }
+    
+    </script>
+</section>
+
+
+    
+
+    <hr />
+
+    <footer class="rodapé">
+        <div class="rodapé__informações">
+            <h2 class="rodapé__titulo">Rossi Tecnologia em Podas</h2>
+            <p class="rodapé__contato">
+                <img src="/img/icons8-whatsapp.svg" class="rodapé__imagem" alt="Ícone de telefone"> (16) 9999-9999
+            </p>
+            <p class="rodapé__localização">
+                <img src="/img/icons8-location-pin-48.png" class="rodapé__imagem" alt="Ícone de localização"> Vista Alegre do Alto, São Paulo
+            </p>
+            <p class="rodapé__email">
+                <img src="/img/icons8-email-50.png" class="rodapé__imagem" alt="Ícone de e-mail">
+                <a href="mailto:pedroluizrossi@gmail.com">youremail@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+    
+    
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
+</body>
+
+</html>

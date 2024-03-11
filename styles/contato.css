@@ -1,0 +1,151 @@
+.contato {
+    background-color: var(--branco);
+    padding: 1em;
+    
+}
+
+.contato__titulo,
+.contato__texto {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contato__titulo {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contato__texto {
+    font-weight: 300;
+    margin: 1em 0;
+}
+
+.contato__email {
+    padding: 1em;
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    width: 90%;
+    color: var(--azul);
+}
+
+.contato__descricao {
+    padding: 1em;
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    width: 90%;
+    margin-top: 1em;
+    color: var(--azul);
+    
+}
+
+.contato__botão {
+    background-color: var(--laranja);
+    padding: 1em 2em;
+    margin-top: 1em;
+    color: var(--branco);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 20px;
+    justify-content: center;
+    font-size: medium;
+    border: none; /* Removendo a borda para um visual mais limpo */
+    cursor: pointer; /* Alterando o cursor para indicar a ação de clique */
+    transition: background-color 0.3s ease; /* Adicionando uma transição suave na mudança de cor de fundo */
+}
+
+/* Efeito de hover para dar feedback visual ao usuário */
+.contato__botão:hover {
+    background-color: #FFA500; /* Cor mais clara para o hover, ajuste conforme necessário */
+}
+
+.contato__descricao::placeholder{
+    font-family: var(--fonte-principal);
+    color: var(--azul);
+
+   
+}
+
+
+.contato__email::placeholder {
+    font-family: var(--fonte-principal);
+    color: var(--azul);
+    background: url("../img/Email.svg") no-repeat;
+    padding-left: 2em;
+}
+
+@media screen and (min-width: 1024px) {
+    .contato {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato__titulo {
+        font-size: 24px;
+    }
+
+    .contato__descrição {
+        margin-right: 1em;
+        width: 30%;
+    }
+
+    .contato__email {
+        width: 60%;
+    }
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+  animation: pulse 2s infinite ease-in-out;
+
+
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Ajustes para diferentes tamanhos de tela */
+  @media (max-width: 768px) {
+    .float {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+  }
+.my-float{
+	margin-top:16px;
+}
+  @media screen and (min-width: 1024px) {
+    .contato__icone-whatsapp {
+      margin-right: 20px; /* Ajuste o espaçamento em telas maiores */
+    }
+  }
+  
+
+
+@media screen and (min-width: 1728px){
+    .contato{
+        padding: 3em 20vw;
+    }
+}
